@@ -14,9 +14,7 @@ const fetchLinks = async () => {
             body: JSON.stringify(body)
         });
 
-        if (!response.ok) {
-            return false;
-        } else {
+        if (response.ok) {
             const data = await response.json();
             return data;
         }
@@ -29,9 +27,7 @@ const fetchLinks = async () => {
 async function writeLinks() {
     response = await fetchLinks();
 
-    if (!response) {
-        document.write("Invalid request");
-    } else {
+    if (response) {
         response.forEach(el => document.write(`${el}<br>`));
     }
 }
