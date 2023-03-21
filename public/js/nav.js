@@ -2,7 +2,7 @@
 
 const elNav = document.querySelector("nav");
 
-const links = async () => {
+(async () => {
     try {
         const url = "/myblock/nav";
         const body = {
@@ -22,11 +22,9 @@ const links = async () => {
 
         const data = await response.json();
 
-        return data;
+        console.log(data);
 
     } catch (error) {
-        return error;
+        console.log(error);
     }
-}
-
-console.log(links());
+})();
