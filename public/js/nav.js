@@ -20,9 +20,7 @@ const elNav = document.querySelector("nav");
             throw new Error("Network response was not ok");
         }
 
-        const data = await response.json();
-
-        console.log(data);
+        console.log(await response.text());
 
     } catch (error) {
         console.log(error.message);

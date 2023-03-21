@@ -1,6 +1,6 @@
 <?php
-require_once '../app/models/Nav.php';
-require_once '../app/controllers/NavController.php';
+require_once "../controllers/NavController.php";
+require_once "../models/Nav.php";
 
 $json = file_get_contents('php://input');
 $data = json_decode($json, true);
@@ -13,5 +13,5 @@ $nav = (object) NavController::generateNav($type, $auth);
 $json_pages = NavController::getJsonNav($nav);
 
 header('Content-Type: application/json');
-echo json_encode($json_pages);
+echo $json_pages;
 ?>
