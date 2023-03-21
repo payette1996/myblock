@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./public/css/style.css">
-    <script src="./public/js/nav.js" defer></script>
+    <script src="./public/js/navlinks.js" defer></script>
     <title>myBlock</title>
 </head>
 <body>
@@ -14,9 +14,7 @@
         <div class="wrapper">
             <nav>
                 myBlock
-                <ul id="nav-links">
-                    
-                </ul>
+                <ul id="nav-links"></ul>
             </nav>
         </div>
     </header>
