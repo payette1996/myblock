@@ -1,5 +1,5 @@
 <?php
-require_once "./app/models/Nav.php";
+require_once "../models/Nav.php";
 
 class NavController {
     public static function generateNav($type, $auth) : Nav
