@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: .5rem;
+    max-width: 768px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 768px;
+    padding: .5rem 1rem;
+    background-color: dodgerblue;
+    border-radius: 5px;
+}
+
+.nav > ul {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+}
+
+.nav > ul > li {
+    margin-right: 1rem;
+}
+
+.nav > ul > li:last-child {
+    margin-right: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    color: white;
+}

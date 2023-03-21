@@ -1,0 +1,5 @@
+# Enable the RewriteEngine to allow URL rewriting
+RewriteEngine On
+
+RewriteRule ^$ public/index.php [L]
+RewriteRule ^nav$ app/routes/nav.php [L]
