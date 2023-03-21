@@ -1,4 +1,4 @@
-const elNav = document.querySelector("nav");
+const navLinks = document.querySelector("#nav-links");
 
 const fetchLinks = async () => {
     try {
@@ -28,7 +28,7 @@ async function writeLinks() {
     response = await fetchLinks();
 
     if (response) {
-        response.forEach(el => document.write(`${el}<br>`));
+        response.forEach(el => navLinks.innerHTML += `<li><a href="#" class="nav-link">${el}</a></li>`);
     }
 }
 

@@ -11,7 +11,14 @@
 </head>
 <body>
     <header>
-        <nav></nav>
+        <div class="wrapper">
+            <nav>
+                myBlock
+                <ul id="nav-links">
+                    
+                </ul>
+            </nav>
+        </div>
     </header>
     <main></main>
 </body>
