@@ -9,13 +9,11 @@ class NavController {
             switch ($type) {
                 case "index":
                     $pages = ["Register", "Login"];
-                    break;
+                    return new Nav($pages);
                 default:
                     throw new InvalidArgumentException("$type is not a valid type");
             }
         }
-
-        return new Nav($pages);
     }
 
     public static function getJsonNav(Nav $nav)
