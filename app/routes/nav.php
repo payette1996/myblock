@@ -21,5 +21,7 @@ if ($action === "links") {
     echo $json_pages;
 } else {
     http_response_code(400);
+    header('Content-Type: text/plain');
+    echo "400 Error";
 }
 ?>
