@@ -1,6 +1,6 @@
 const navLinks = document.querySelector("#nav-links");
 
-const fetchLinks = async () => {
+async function fetchLinks () {
     try {
         const url = "/myblock/nav/links";
         const body = {
@@ -25,10 +25,10 @@ const fetchLinks = async () => {
 };
 
 async function writeLinks() {
-    response = await fetchLinks();
+    const data = await fetchLinks();
 
-    if (response) {
-        response.forEach(el => navLinks.innerHTML += `<li><a href="#" class="nav-link">${el}</a></li>`);
+    if (data) {
+        data.forEach(el => navLinks.innerHTML += `<li><a href="#" class="nav-link">${el}</a></li>`);
     }
 }
 
