@@ -2,8 +2,7 @@
 require_once "./app/models/Nav.php";
 
 class NavController {
-
-    public static function generateNav($type, $auth)
+    public static function generateNav($type, $auth) : Nav
     {
         if (!$auth) {
             switch ($type) {
@@ -16,7 +15,7 @@ class NavController {
         }
     }
 
-    public static function getJsonNav(Nav $nav)
+    public static function getJsonNav(Nav $nav) : string
     {
         return json_encode($nav->getPages());
     }

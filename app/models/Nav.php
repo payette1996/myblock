@@ -7,7 +7,7 @@ class Nav
         $this->pages = $pages;
     }
 
-    public function getPages() {
+    public function getPages() : array {
         return $this->pages;
     }
 }

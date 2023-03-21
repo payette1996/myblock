@@ -25,6 +25,6 @@ const elNav = document.querySelector("nav");
         console.log(data);
 
     } catch (error) {
-        console.log(error);
+        console.log(error.message);
     }
 })();
