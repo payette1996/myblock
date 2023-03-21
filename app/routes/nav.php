@@ -1,16 +1,25 @@
 <?php
 require_once "../controllers/NavController.php";
 
-$json = file_get_contents('php://input');
-$data = json_decode($json, true);
+$url = $_SERVER["REQUEST_URI"];
+$sections = explode("/", $url);
+$action = end($sections);
 
-$type = (string) $data["type"];
-$auth = (bool) $data["auth"];
+if ($action === "links") {
+    $json = file_get_contents('php://input');
+    $data = json_decode($json, true);
 
-$nav = (object) NavController::generateNav($type, $auth);
+    $type = (string) $data["type"];
+    $auth = (bool) $data["auth"];
 
-$json_pages = NavController::getJsonNav($nav);
+    $nav = (object) NavController::generateNav($type, $auth);
 
-header('Content-Type: application/json');
-echo $json_pages;
+    $json_pages = NavController::getJsonNav($nav);
+
+    http_response_code(200);
+    header('Content-Type: application/json');
+    echo $json_pages;
+} else {
+    http_response_code(400);
+}
 ?>

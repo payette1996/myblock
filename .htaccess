@@ -2,4 +2,4 @@
 RewriteEngine On
 
 RewriteRule ^$ public/index.php [L]
-RewriteRule ^nav$ app/routes/nav.php [L]
+RewriteRule ^nav(/.*)?$ app/routes/nav.php [L]

@@ -13,6 +13,6 @@
     <header>
         <nav></nav>
     </header>
-    <main>index</main>
+    <main></main>
 </body>
 </html>

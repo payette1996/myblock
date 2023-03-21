@@ -1,10 +1,8 @@
-// public/js/nav.js
-
 const elNav = document.querySelector("nav");
 
-(async () => {
+const fetchLinks = async () => {
     try {
-        const url = "/myblock/nav";
+        const url = "/myblock/nav/links";
         const body = {
             type: "index",
             auth: false
@@ -17,12 +15,25 @@ const elNav = document.querySelector("nav");
         });
 
         if (!response.ok) {
-            throw new Error("Network response was not ok");
+            return false;
+        } else {
+            const data = await response.json();
+            return data;
         }
 
-        console.log(await response.text());
-
     } catch (error) {
-        console.log(error.message);
+        console.log(error);
     }
-})();
+};
+
+async function writeLinks() {
+    response = await fetchLinks();
+
+    if (!response) {
+        document.write("Invalid request");
+    } else {
+        response.forEach(el => document.write(`${el}<br>`));
+    }
+}
+
+writeLinks();
